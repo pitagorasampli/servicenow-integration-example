@@ -22,6 +22,5 @@ jobs:
         PROJETO: 'SRE'
         SERVICO: 'cosmos-erp'
         DEFAULT_APROVADOR_EMAIL: 'gisele.faria@cogna.com.br'
-      env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
