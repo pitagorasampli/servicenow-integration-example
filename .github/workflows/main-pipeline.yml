@@ -1,0 +1,25 @@
+name: Main CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  use-template:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Install GitHub CLI
+      run: sudo apt-get install gh -y
+
+    - name: Use CI Pipeline Template
+      uses: pitagorasampli/servicenow-integration-templates/.github/actions/ci-pipeline-template@main
+      with:
+        PROJETO: 'SRE'
+        SERVICO: 'cosmos-erp'
+        DEFAULT_APROVADOR_EMAIL: 'gisele.faria@cogna.com.br'
+
