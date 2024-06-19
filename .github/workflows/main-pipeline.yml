@@ -20,7 +20,7 @@ jobs:
       uses: pitagorasampli/servicenow-integration-templates/.github/actions/ci-pipeline-template@main
       with:
         PROJETO: 'SRE'
-        SERVICO: 'cosmos-erp'
+        ITEMCONFIGURACAO: 'cosmos-erp'
         DEFAULT_APROVADOR_EMAIL: 'gisele.faria@cogna.com.br'
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
